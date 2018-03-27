@@ -24,8 +24,8 @@ CREATE TABLE `employee`(
    `city_of_birth` VARCHAR(40)  NOT NULL,
    `country_of_birth` VARCHAR(40)  NOT NULL,
    `email` VARCHAR(40) NOT NULL,
-   `gender` ENUM('male', 'female') NOT NULL,
-   `civil_state` ENUM('married', 'single', 'divorced', 'widowed') NOT NULL,
+   `gender` ENUM('male', 'female')  NULL,
+   `civil_state` ENUM('married', 'single', 'divorced', 'widowed')  NULL,
    `image_url` VARCHAR(255) NOT NULL,
    `station` INT(10) NOT NULL,
    `department` VARCHAR(255) NULL,
@@ -35,8 +35,8 @@ CREATE TABLE `employee`(
 
 CREATE TABLE `customer`(
    `id` INT(10) NOT NULL AUTO_INCREMENT,
-   `first_name` VARCHAR(40) NOT NULL,
-   `last_name` VARCHAR(40) NOT NULL,
+   `firstName` VARCHAR(40) NOT NULL,
+   `lastName` VARCHAR(40) NOT NULL,
    `email` VARCHAR(40) NOT NULL,
    `gender` ENUM('male', 'female') NOT NULL,
    `date_of_birth` DATE NOT NULL,
@@ -51,9 +51,9 @@ CREATE TABLE `lesson`(
    `employee` INT(10) NOT NULL,
    `customer_id` INT(10) NOT NULL,
    `date_of_lesson` DATE NOT NULL,
-   `from` TIME NOT NULL,
-   `until` TIME NOT NULL,
-   `category` ENUM('Taikwando', ' Kyokushin Karate', 'Kickboks') NOT NULL,
+   `lesson_from` TIME NOT NULL,
+   `lesson_until` TIME NOT NULL,
+   `category` ENUM('Taikwando', ' Kyokushin Karate', 'Kickboks')  NULL,
    `comment` VARCHAR(255) NOT NULL,
 
    PRIMARY KEY (`id`),
@@ -75,7 +75,6 @@ CREATE TABLE `appointment`(
    `customer_id` INT(10) NOT NULL,
    `comment` VARCHAR(80) NULL,
    `status` ENUM('Accepted', 'Awaiting approval', 'Denied') NOT NULL,
-   `lesson` INT(10) NOT NULL,
    `datepicker` DATE NOT NULL,
 
 
