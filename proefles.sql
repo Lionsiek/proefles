@@ -81,6 +81,6 @@ CREATE TABLE `appointment`(
    PRIMARY KEY (`id`),
    FOREIGN KEY (location) REFERENCES location(id),
    FOREIGN KEY (employee) REFERENCES employee(id),
-   FOREIGN KEY (lesson) REFERENCES lesson(id),
+   FOREIGN KEY (lesson_id) REFERENCES lesson(id),
    FOREIGN KEY (customer_id) REFERENCES  customer(id)
 )engine=InnoDB;
