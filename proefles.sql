@@ -24,8 +24,10 @@ CREATE TABLE `employee`(
    `city_of_birth` VARCHAR(40)  NOT NULL,
    `country_of_birth` VARCHAR(40)  NOT NULL,
    `email` VARCHAR(40) NOT NULL,
-   `gender` ENUM('male', 'female')  NULL,
-   `civil_state` ENUM('married', 'single', 'divorced', 'widowed')  NULL,
+--    `gender` ENUM('male', 'female')  NULL,
+   `gender` VARCHAR(40) NULL,
+--    `civil_state` ENUM('married', 'single', 'divorced', 'widowed')  NULL,
+   `civil_state` VARCHAR(40) NULL,
    `image_url` VARCHAR(255) NOT NULL,
    `station` INT(10) NOT NULL,
    `department` VARCHAR(255) NULL,
@@ -38,7 +40,8 @@ CREATE TABLE `customer`(
    `firstName` VARCHAR(40) NOT NULL,
    `lastName` VARCHAR(40) NOT NULL,
    `email` VARCHAR(40) NOT NULL,
-   `gender` ENUM('male', 'female') NOT NULL,
+--    `gender` ENUM('male', 'female') NOT NULL,
+   `gender` VARCHAR(40) NULL,
    `date_of_birth` DATE NOT NULL,
    `telephone_number` VARCHAR(40) NOT NULL,
 
@@ -53,7 +56,8 @@ CREATE TABLE `lesson`(
    `date_of_lesson` DATE NOT NULL,
    `lesson_from` TIME NOT NULL,
    `lesson_until` TIME NOT NULL,
-   `category` ENUM('Taikwando', ' Kyokushin Karate', 'Kickboks')  NULL,
+--    `category` ENUM('Taikwando', ' Kyokushin Karate', 'Kickboks')  NULL,
+   `category` VARCHAR(40)  NULL,
    `comment` VARCHAR(255) NOT NULL,
 
    PRIMARY KEY (`id`),
@@ -74,7 +78,8 @@ CREATE TABLE `appointment`(
    `employee` INT(10)	NOT NULL,
    `customer_id` INT(10) NOT NULL,
    `comment` VARCHAR(80) NULL,
-   `status` ENUM('Accepted', 'Awaiting approval', 'Denied') NOT NULL,
+--    `status` ENUM('Accepted', 'Awaiting approval', 'Denied') NOT NULL,
+   `status` VARCHAR(40) NOT NULL,
    `datepicker` DATE NOT NULL,
 
 
