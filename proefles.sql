@@ -9,7 +9,6 @@ CREATE TABLE `location`(
    `country` VARCHAR(255) NOT NULL,
    `image_url` VARCHAR(255) NOT NULL,
 
-
    PRIMARY KEY(`id`)
 )engine=InnoDB;
 
@@ -61,11 +60,6 @@ CREATE TABLE `lesson`(
    FOREIGN KEY (employee) REFERENCES employee(id)
 )engine=InnoDB;
 
-
-
-
-
-
 CREATE TABLE `appointment`(
    `id` INT(10) NOT NULL AUTO_INCREMENT,
    `name` varchar(40) NOT NULL,
@@ -76,7 +70,6 @@ CREATE TABLE `appointment`(
    `comment` VARCHAR(80) NULL,
    `status` ENUM('Accepted', 'Awaiting approval', 'Denied') NOT NULL,
    `datepicker` DATE NOT NULL,
-
 
    PRIMARY KEY (`id`),
    FOREIGN KEY (location) REFERENCES location(id),
