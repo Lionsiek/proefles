@@ -13,7 +13,7 @@ class customerType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('firstName')->add('lastName')->add('email')->add('dateOfBirth')->add('telephoneNumber')        ;
+        $builder->add('firstName')->add('lastName')->add('email')->add('dateOfBirth')->add('telephoneNumber');
     }
     
     /**

@@ -16,8 +16,9 @@
                 <th>Cityofbirth</th>
                 <th>Countryofbirth</th>
                 <th>Email</th>
-                <th>Imageurl</th>
                 <th>Station</th>
+                <th>Department</th>
+                <th>Dateofbirth</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -34,8 +35,9 @@
                 <td>{{ employee.cityOfBirth }}</td>
                 <td>{{ employee.countryOfBirth }}</td>
                 <td>{{ employee.email }}</td>
-                <td>{{ employee.imageUrl }}</td>
                 <td>{{ employee.station }}</td>
+                <td>{{ employee.department }}</td>
+                <td>{% if employee.dateOfBirth %}{{ employee.dateOfBirth|date('Y-m-d') }}{% endif %}</td>
                 <td>
                     <ul>
                         <li>

@@ -24,21 +24,21 @@ class customer
     /**
      * @var string
      *
-     * @ORM\Column(name="first_name", type="string", length=40)
+     * @ORM\Column(name="firstName", type="string", length=255)
      */
     private $firstName;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="last_name", type="string", length=40)
+     * @ORM\Column(name="lastName", type="string", length=255)
      */
     private $lastName;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="email", type="string", length=40)
+     * @ORM\Column(name="email", type="string", length=255)
      */
     private $email;
 
@@ -52,7 +52,7 @@ class customer
     /**
      * @var string
      *
-     * @ORM\Column(name="telephone_number", type="string", length=40)
+     * @ORM\Column(name="telephone_number", type="string", length=255)
      */
     private $telephoneNumber;
 

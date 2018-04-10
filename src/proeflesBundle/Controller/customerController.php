@@ -46,7 +46,7 @@ class customerController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($customer);
-            $em->flush($customer);
+            $em->flush();
 
             return $this->redirectToRoute('customer_show', array('id' => $customer->getId()));
         }
@@ -112,7 +112,7 @@ class customerController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->remove($customer);
-            $em->flush($customer);
+            $em->flush();
         }
 
         return $this->redirectToRoute('customer_index');

@@ -46,7 +46,7 @@ class lessonController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($lesson);
-            $em->flush($lesson);
+            $em->flush();
 
             return $this->redirectToRoute('lesson_show', array('id' => $lesson->getId()));
         }
@@ -112,7 +112,7 @@ class lessonController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->remove($lesson);
-            $em->flush($lesson);
+            $em->flush();
         }
 
         return $this->redirectToRoute('lesson_index');

@@ -24,72 +24,65 @@ class employee
     /**
      * @var string
      *
-     * @ORM\Column(name="first_name", type="string", length=40)
+     * @ORM\Column(name="first_name", type="string", length=255)
      */
     private $firstName;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="last_name", type="string", length=40)
+     * @ORM\Column(name="last_name", type="string", length=255)
      */
     private $lastName;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="street", type="string", length=40)
+     * @ORM\Column(name="street", type="string", length=255)
      */
     private $street;
 
     /**
-     * @var string
+     * @var int
      *
-     * @ORM\Column(name="street_number", type="string", length=5)
+     * @ORM\Column(name="street_number", type="integer")
      */
     private $streetNumber;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="city", type="string", length=40)
+     * @ORM\Column(name="city", type="string", length=255)
      */
     private $city;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="country", type="string", length=40)
+     * @ORM\Column(name="country", type="string", length=255)
      */
     private $country;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="city_of_birth", type="string", length=40)
+     * @ORM\Column(name="city_of_birth", type="string", length=255)
      */
     private $cityOfBirth;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="country_of_birth", type="string", length=40)
+     * @ORM\Column(name="country_of_birth", type="string", length=255)
      */
     private $countryOfBirth;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="email", type="string", length=40)
+     * @ORM\Column(name="email", type="string", length=255)
      */
     private $email;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="image_url", type="string", length=255)
-     */
-    private $imageUrl;
 
     /**
      * @var int
@@ -97,6 +90,20 @@ class employee
      * @ORM\Column(name="station", type="integer")
      */
     private $station;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="department", type="string", length=255)
+     */
+    private $department;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date_of_birth", type="date")
+     */
+    private $dateOfBirth;
 
 
     /**
@@ -184,7 +191,7 @@ class employee
     /**
      * Set streetNumber
      *
-     * @param string $streetNumber
+     * @param integer $streetNumber
      *
      * @return employee
      */
@@ -198,7 +205,7 @@ class employee
     /**
      * Get streetNumber
      *
-     * @return string
+     * @return int
      */
     public function getStreetNumber()
     {
@@ -326,30 +333,6 @@ class employee
     }
 
     /**
-     * Set imageUrl
-     *
-     * @param string $imageUrl
-     *
-     * @return employee
-     */
-    public function setImageUrl($imageUrl)
-    {
-        $this->imageUrl = $imageUrl;
-
-        return $this;
-    }
-
-    /**
-     * Get imageUrl
-     *
-     * @return string
-     */
-    public function getImageUrl()
-    {
-        return $this->imageUrl;
-    }
-
-    /**
      * Set station
      *
      * @param integer $station
@@ -371,6 +354,54 @@ class employee
     public function getStation()
     {
         return $this->station;
+    }
+
+    /**
+     * Set department
+     *
+     * @param string $department
+     *
+     * @return employee
+     */
+    public function setDepartment($department)
+    {
+        $this->department = $department;
+
+        return $this;
+    }
+
+    /**
+     * Get department
+     *
+     * @return string
+     */
+    public function getDepartment()
+    {
+        return $this->department;
+    }
+
+    /**
+     * Set dateOfBirth
+     *
+     * @param \DateTime $dateOfBirth
+     *
+     * @return employee
+     */
+    public function setDateOfBirth($dateOfBirth)
+    {
+        $this->dateOfBirth = $dateOfBirth;
+
+        return $this;
+    }
+
+    /**
+     * Get dateOfBirth
+     *
+     * @return \DateTime
+     */
+    public function getDateOfBirth()
+    {
+        return $this->dateOfBirth;
     }
 }
 

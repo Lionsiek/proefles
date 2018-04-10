@@ -13,7 +13,7 @@ class appointmentType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('name')->add('location')->add('lessonId')->add('employee')->add('customerId')->add('comment')->add('datepicker')        ;
+        $builder->add('name')->add('location')->add('lessonId')->add('employee')->add('customerId')->add('comment')->add('datepicker');
     }
     
     /**

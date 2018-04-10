@@ -46,12 +46,16 @@
                 <td>{{ employee.email }}</td>
             </tr>
             <tr>
-                <th>Imageurl</th>
-                <td>{{ employee.imageUrl }}</td>
-            </tr>
-            <tr>
                 <th>Station</th>
                 <td>{{ employee.station }}</td>
+            </tr>
+            <tr>
+                <th>Department</th>
+                <td>{{ employee.department }}</td>
+            </tr>
+            <tr>
+                <th>Dateofbirth</th>
+                <td>{% if employee.dateOfBirth %}{{ employee.dateOfBirth|date('Y-m-d') }}{% endif %}</td>
             </tr>
         </tbody>
     </table>

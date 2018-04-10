@@ -46,7 +46,7 @@ class locationController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($location);
-            $em->flush($location);
+            $em->flush();
 
             return $this->redirectToRoute('location_show', array('id' => $location->getId()));
         }
@@ -112,7 +112,7 @@ class locationController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->remove($location);
-            $em->flush($location);
+            $em->flush();
         }
 
         return $this->redirectToRoute('location_index');

@@ -13,7 +13,7 @@ class locationType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('name')->add('address')->add('zipcode')->add('email')->add('telephoneNumber')->add('city')->add('country')->add('imageUrl')        ;
+        $builder->add('name')->add('adress')->add('zipcode')->add('telephoneNumber')->add('city')->add('country');
     }
     
     /**

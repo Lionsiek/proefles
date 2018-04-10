@@ -46,7 +46,7 @@ class appointmentController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($appointment);
-            $em->flush($appointment);
+            $em->flush();
 
             return $this->redirectToRoute('appointment_show', array('id' => $appointment->getId()));
         }
@@ -112,7 +112,7 @@ class appointmentController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->remove($appointment);
-            $em->flush($appointment);
+            $em->flush();
         }
 
         return $this->redirectToRoute('appointment_index');

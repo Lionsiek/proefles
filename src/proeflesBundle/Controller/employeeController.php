@@ -46,7 +46,7 @@ class employeeController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($employee);
-            $em->flush($employee);
+            $em->flush();
 
             return $this->redirectToRoute('employee_show', array('id' => $employee->getId()));
         }
@@ -112,7 +112,7 @@ class employeeController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->remove($employee);
-            $em->flush($employee);
+            $em->flush();
         }
 
         return $this->redirectToRoute('employee_index');

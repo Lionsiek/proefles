@@ -24,7 +24,7 @@ class lesson
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=40)
+     * @ORM\Column(name="name", type="string", length=255)
      */
     private $name;
 
@@ -66,7 +66,7 @@ class lesson
     /**
      * @var string
      *
-     * @ORM\Column(name="comment", type="string", length=255)
+     * @ORM\Column(name="comment", type="string", length=255, nullable=true)
      */
     private $comment;
 

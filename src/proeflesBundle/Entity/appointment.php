@@ -59,7 +59,7 @@ class appointment
     /**
      * @var string
      *
-     * @ORM\Column(name="comment", type="string", length=80)
+     * @ORM\Column(name="comment", type="string", length=255, nullable=true)
      */
     private $comment;
 

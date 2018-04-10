@@ -24,16 +24,16 @@ class location
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=255)
+     * @ORM\Column(name="name", type="string", length=40)
      */
     private $name;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="address", type="string", length=255)
+     * @ORM\Column(name="adress", type="string", length=255)
      */
-    private $address;
+    private $adress;
 
     /**
      * @var string
@@ -41,13 +41,6 @@ class location
      * @ORM\Column(name="zipcode", type="string", length=255)
      */
     private $zipcode;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="email", type="string", length=255)
-     */
-    private $email;
 
     /**
      * @var int
@@ -69,13 +62,6 @@ class location
      * @ORM\Column(name="country", type="string", length=255)
      */
     private $country;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="image_url", type="string", length=255)
-     */
-    private $imageUrl;
 
 
     /**
@@ -113,27 +99,27 @@ class location
     }
 
     /**
-     * Set address
+     * Set adress
      *
-     * @param string $address
+     * @param string $adress
      *
      * @return location
      */
-    public function setAddress($address)
+    public function setAdress($adress)
     {
-        $this->address = $address;
+        $this->adress = $adress;
 
         return $this;
     }
 
     /**
-     * Get address
+     * Get adress
      *
      * @return string
      */
-    public function getAddress()
+    public function getAdress()
     {
-        return $this->address;
+        return $this->adress;
     }
 
     /**
@@ -158,30 +144,6 @@ class location
     public function getZipcode()
     {
         return $this->zipcode;
-    }
-
-    /**
-     * Set email
-     *
-     * @param string $email
-     *
-     * @return location
-     */
-    public function setEmail($email)
-    {
-        $this->email = $email;
-
-        return $this;
-    }
-
-    /**
-     * Get email
-     *
-     * @return string
-     */
-    public function getEmail()
-    {
-        return $this->email;
     }
 
     /**
@@ -254,30 +216,6 @@ class location
     public function getCountry()
     {
         return $this->country;
-    }
-
-    /**
-     * Set imageUrl
-     *
-     * @param string $imageUrl
-     *
-     * @return location
-     */
-    public function setImageUrl($imageUrl)
-    {
-        $this->imageUrl = $imageUrl;
-
-        return $this;
-    }
-
-    /**
-     * Get imageUrl
-     *
-     * @return string
-     */
-    public function getImageUrl()
-    {
-        return $this->imageUrl;
     }
 }
 
